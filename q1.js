@@ -56,7 +56,7 @@ const valuesToInsert = [
   15, 25, 17, 21, 28, 0, 14, 50, 1, 45, 13, 12, 11, 30, 35, 33, 31, 34,
 ];
 valuesToInsert.map((value) => insert(root, value));
-console.log(root);
+// console.log(root);
 
 let sorted_array = [];
 
