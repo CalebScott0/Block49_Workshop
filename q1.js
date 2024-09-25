@@ -50,16 +50,17 @@ function inOrder(fn, root) {
   //   }
 }
 
-let root = new Node(5);
+const root = new Node(5);
 
 const valuesToInsert = [
   15, 25, 17, 21, 28, 0, 14, 50, 1, 45, 13, 12, 11, 30, 35, 33, 31, 34,
 ];
-
 valuesToInsert.map((value) => insert(root, value));
+console.log(root);
 
 let sorted_array = [];
 
+// pass fn to add discovered node to array and the created root
 inOrder((x) => sorted_array.push(x), root);
 
 console.log(sorted_array);
