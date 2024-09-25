@@ -90,7 +90,7 @@ const node = (key) => {
 };
 
 const searchBottomLeftValue = (root) => {
-  // using level order search
+  // using level order search - track row of tree
 };
 
 const root = node(2);
