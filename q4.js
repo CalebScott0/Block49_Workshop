@@ -24,6 +24,7 @@ const searchBottomLeftValue = (root) => {
     bottom_left = q[0].key;
     let next_level = [];
     // traverse through tree levels L to R
+    // and push the nodes of the next level to next_level array
     for (const node of q) {
       if (node.left) {
         next_level.push(node.left);
@@ -33,9 +34,12 @@ const searchBottomLeftValue = (root) => {
       }
     }
     // reassign q to the next level array
+    // at the last row of tree, next_level will not have a length -> while loop will exit
+    //
     q = next_level;
   }
-
+  // bottom_left will hold the first (left most) value
+  // of the last row in the tree
   return bottom_left;
 };
 
