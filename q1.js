@@ -14,7 +14,7 @@ class Node {
 }
 
 function insert(root, key) {
-  // if no root or once a left or right leaf is hit with no node: create node and return it to current root branch
+  // if no root or once a left or right branch is hit with no node: create node and return it to current root branch
   if (!root) return new Node(key);
 
   // don't allow duplicates
@@ -28,7 +28,7 @@ function insert(root, key) {
     // move right on tree
     root.right = insert(root.right, key);
   }
-  // after recursion is complete, return root with insert
+  // after recursion is complete, return root with inserted key
   return root;
 }
 
