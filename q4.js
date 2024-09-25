@@ -91,6 +91,8 @@ const node = (key) => {
 
 const searchBottomLeftValue = (root) => {
   // using level order search - track row of tree
+  let q = new Queue(root);
+  return q;
 };
 
 const root = node(2);
@@ -99,4 +101,4 @@ root.right = node(3);
 root.left.left = node(4);
 root.right.left = node(5);
 root.right.left.left = node(6);
-console.log(root);
+console.log(searchBottomLeftValue(root));
