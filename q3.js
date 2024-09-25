@@ -34,16 +34,18 @@ class Node {
 
 // using recursion
 const countNodes = (root) => {
-  // at each leaf
-  // 0 is returned for both left and right
-  // giving that leaf (current root) a value of 1
-  // in each parent/child subtree - return will be '1 + 1 + 1' if 2 children
-  //                                  '1 + 0 + 1' or '1 + 1 + 0' if only 1 child
-  //                                  '1 + 0 + 0' if no children
+  /* at each leaf
+   * 0 is returned for both left and right
+   * giving that leaf (current root) a value of 1
+   * in each parent/child subtree - return will be '1 + 1 + 1' if 2 children
+   *                                  '1 + 0 + 1' or '1 + 1 + 0' if only 1 child
+   *                                  '1 + 0 + 0' if no children
+   */
   if (!root) return 0;
   /* visits all left paths and then right paths
    * after full left subtree traversal,
-   * l = # of elements returned in countNodes for left subtree*/
+   * l = # of elements returned in countNodes for left subtree
+   * */
   let l = countNodes(root.left);
   let r = countNodes(root.right);
   // for each subtree, returns 1(root) + number of left + number of right
