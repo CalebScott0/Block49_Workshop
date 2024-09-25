@@ -35,13 +35,9 @@ function insert(root, key) {
 // inOrder = left, root, right
 // fn = (x) => array.push[x]
 function inOrder(fn, root) {
-  if (root.left) {
-    inOrder(fn, root.left);
-  }
+  if (root.left) inOrder(fn, root.left);
   fn(root.key);
-  if (root.right) {
-    inOrder(fn, root.right);
-  }
+  if (root.right) inOrder(fn, root.right);
   //   if (root) {
   // recursively calls inOrder on next root and logs values as the tree is traversed
   // inOrder(root.left);
