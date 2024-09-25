@@ -75,7 +75,6 @@ sorted_array.forEach(
 );
 
 console.log("Is inOrder?", res);
-
 /* expect [
  *    0,  1,  5, 11, 12, 13, 14,
  *    15, 17, 21, 25, 28, 30, 31,
