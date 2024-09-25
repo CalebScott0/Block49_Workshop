@@ -67,12 +67,36 @@ class Queue {
 }
 
 const q = new Queue();
-q.enqueue(2);
-q.enqueue(3);
-q.enqueue(4);
-q.enqueue(5);
+// q.enqueue(2);
+// q.enqueue(3);
+// q.enqueue(4);
+// q.enqueue(5);
+// // console.log(q.peek());
+// // console.log(q.dequeue());
+// // console.log("length", q.len());
 // console.log(q.peek());
-// console.log(q.dequeue());
-// console.log("length", q.len());
-console.log(q.peek());
-console.log(q.last);
+// console.log(q.last);
+
+class Tree_Node {
+  constructor(key) {
+    this.key = key;
+    this.left = null;
+    this.right = null;
+  }
+}
+
+const node = (key) => {
+  return new Tree_Node(key);
+};
+
+const searchBottomLeftValue = (root) => {
+  // using level order search
+};
+
+const root = node(2);
+root.left = node(1);
+root.right = node(3);
+root.left.left = node(4);
+root.right.left = node(5);
+root.right.left.left = node(6);
+console.log(root);
