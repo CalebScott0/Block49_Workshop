@@ -28,7 +28,7 @@ function insert(root, key) {
     // move right on tree
     root.right = insert(root.right, key);
   }
-  // after recursion is complete, return root with inserted key
+  // return root with inserted key
   return root;
 }
 
